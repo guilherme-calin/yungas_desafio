@@ -1,0 +1,159 @@
+$headerColor: #232F45;
+$footerColor: #232F45;
+$sideMargin: 0.5rem;
+
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-height: 100vh;
+
+  .modal {
+    left: 0;
+    max-height: 100%;
+    overflow-y: scroll;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+  }
+
+  .header {
+    background-color: $headerColor;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .logo {
+    height: auto;
+    margin: $sideMargin;
+    max-width: 128px;
+    width: 35%;
+  }
+
+  .search-container {
+    box-shadow: 2px 2px 6px 0 rgba(0, 0, 0, 0.75);
+    margin: 0.5rem $sideMargin;
+  }
+
+  .results-container {
+    background-color: #F0F0F0;
+    box-shadow: 2px 2px 6px 0 rgba(0, 0, 0, 0.75);
+    margin: 0.5rem $sideMargin;
+  }
+
+  .footer {
+    align-items: flex-end;
+    background-color: $footerColor;
+    display: flex;
+    flex-direction: column;
+    height: 50px;
+    justify-content: center;
+    margin-top: auto;
+
+    span {
+      color: white;
+      margin-right: $sideMargin;
+    }
+
+    span:first-of-type {
+      font-weight: bold;
+      font-size: 0.75rem;
+    }
+
+    span:last-of-type {
+      font-size: 0.625rem;
+    }
+  }
+
+  h1 {
+    text-align: center;
+  }
+}
+
+/**************************************
+  MEDIA QUERIES PARA LAYOUT RESPONSIVO
+ **************************************/
+
+@media screen and (min-width: 480px) {
+  .App {
+    .search-container {
+      margin: 0.5rem 20%;
+    }
+
+    .results-container {
+      margin: 0.5rem 8%;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .App {
+    .search-container {
+      margin: 0.5rem 25%;
+    }
+
+    .results-container {
+      margin: 0.5rem 4%;
+    }
+
+    .modal {
+      width: 70%;
+      left: 15%;
+    }
+  }
+}
+
+@media screen and (min-width: 1080px) {
+  .App {
+    .search-container {
+      margin: 0.5rem 25%;
+    }
+
+    .results-container {
+      margin: 0.5rem 2%;
+    }
+
+    .header,
+    .footer{
+      height: 75px;
+    }
+
+    .footer {
+      span:first-of-type {
+        font-size: 0.875rem;
+      }
+
+      span:last-of-type {
+        font-size: 0.75rem;
+      }
+    }
+
+    .modal {
+      width: 60%;
+      left: 20%;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+    }
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .App {
+    .results-container {
+      margin: 0.5rem 5%;
+    }
+
+    .modal {
+      width: 50%;
+      left: 25%;
+    }
+  }
+}
+
+
+

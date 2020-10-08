@@ -1,0 +1,146 @@
+$pageHandlerShadow: 1px 1px 1px 0 rgba(0, 0, 0, 0.75);
+
+.Results {
+  background-color: #F0F0F0;
+
+  .header {
+    font-size: 1.25rem;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .person-container {
+    border-radius: 5px;
+    margin: 0.25rem 0.25rem 1rem;
+    box-shadow: 2px 2px 6px 0 rgba(0, 0, 0, 0.75);
+  }
+
+  .page-handler {
+    border: 3px double silver;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 0.1rem 0;
+    margin-top: 2rem;
+  }
+
+  .page-handler:first-of-type {
+    margin-bottom: 2rem;
+  }
+
+  button {
+    font-size: 1.5rem;
+    background-color: #F0F0F0;
+
+    span {
+      position: relative;
+      opacity: 0;
+      z-index: -1;
+    }
+  }
+
+  .page-from-total {
+    min-width: 0;
+    flex: 3 3 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  input {
+    font-size: 1.5rem;
+    width: 40%;
+    max-width: 100px;
+    margin-right: 0.4rem;
+    text-align: center;
+  }
+
+  span {
+    font-size: 1.5rem;
+  }
+
+  .clickable {
+    cursor: pointer;
+    transition-property: background-color;
+    transition-duration: 0.5s;
+    transition-timing-function: linear;
+  }
+
+  .to-silver:hover {
+    background-color: silver;
+  }
+
+  .double-arrow-left-icon {
+    background-image: url("./assets/double_arrow_left.svg");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 3.5rem auto;
+    box-shadow: $pageHandlerShadow;
+    justify-self: flex-start;
+    flex: 1 1 auto;
+  }
+
+  .arrow-left-icon{
+    background-image: url("./assets/arrow_left.svg");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 3.0625rem auto;
+    box-shadow: $pageHandlerShadow;
+    justify-self: flex-start;
+    flex: 1 1 auto;
+  }
+
+  .double-arrow-right-icon {
+    background-image: url("./assets/double_arrow_right.svg");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 3.5rem auto;
+    box-shadow: $pageHandlerShadow;
+    flex: 1 1 auto;
+    justify-self: flex-end;
+
+  }
+
+  .arrow-right-icon{
+    background-image: url("./assets/arrow_right.svg");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 3.0625rem auto;
+    box-shadow: $pageHandlerShadow;
+    flex: 1 1 auto;
+    justify-self: flex-end;
+  }
+
+
+}
+
+/**************************************
+  MEDIA QUERIES PARA LAYOUT RESPONSIVO
+ **************************************/
+
+@media screen and (min-width: 768px) {
+ .Results {
+   .header {
+     font-size: 2rem;
+   }
+
+   .person-list-container {
+     display: flex;
+     flex-direction: row;
+     flex-wrap: wrap;
+     justify-content: center;
+   }
+
+   .person-container {
+     flex: 0 0 48%;
+   }
+ }
+}
+
+@media screen and (min-width: 1080px) {
+  .Results {
+    .person-container {
+      flex: 0 0 32%;
+    }
+  }
+}

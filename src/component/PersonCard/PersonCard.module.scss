@@ -1,0 +1,123 @@
+$informationNameHeight: 25%;
+
+.PersonCard {
+  background-color: #1D3D6C;
+  border-radius: inherit;
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  width: 100%;
+
+  .thumbnail-section {
+    align-items: center;
+    display: flex;
+    flex: 1 1 30%;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .information-section {
+    flex: 1 1 70%;
+  }
+
+  .name-info {
+    height: $informationNameHeight;
+  }
+
+  .location-info {
+    display: flex;
+    flex-direction: column;
+    height: calc(100% - #{$informationNameHeight});
+    justify-content: center;
+  }
+
+  img {
+    max-width: 148px;
+    min-width: 64px;
+    padding: 0.5rem;
+    width: 100%;
+  }
+
+  p, span {
+    color: white;
+    font-weight: normal;
+  }
+
+  p {
+    font-size: 1rem;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+  }
+
+  span {
+    border-bottom: 1px solid white;
+    display: block;
+    font-size: 1.125rem;
+    padding: 0.25rem;
+    text-align: center;
+  }
+}
+
+.clickable {
+  cursor: pointer;
+  transition-property: background-color;
+  transition-duration: 0.5s;
+  transition-timing-function: linear;
+}
+
+.to-darkblue:hover {
+  background-color: darkblue;
+}
+
+/**************************************
+  MEDIA QUERIES PARA LAYOUT RESPONSIVO
+ **************************************/
+
+@media screen and (min-width: 480px) {
+  .PersonCard {
+      span {
+        font-size: 1.5rem;
+      }
+
+      p {
+        font-size: 1.25rem;
+      }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .PersonCard {
+      span {
+        font-size: 1.115rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+  }
+}
+
+@media screen and (min-width: 1380px) {
+  .PersonCard {
+      span {
+        font-size: 1.5rem;
+      }
+
+      p {
+        font-size: 1.25rem;
+      }
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .PersonCard {
+      span {
+        font-size: 1.75rem;
+      }
+
+      p {
+        font-size: 1.5rem;
+      }
+  }
+}

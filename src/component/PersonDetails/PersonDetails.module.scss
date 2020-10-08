@@ -1,0 +1,126 @@
+.PersonDetails {
+  background-color: #1D3D6C;
+  border: 4px double #E62254;
+  font-family: 'Montserrat', sans-serif;
+  width: 100%;
+
+  .header-card {
+    background-color: #F5F5F5;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .image-subsection {
+    align-items: center;
+    display: flex;
+    flex: 1 1 35%;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+   .name-subsection {
+     align-items: flex-start;
+     display: flex;
+     flex: 1 1 65%;
+     flex-direction: column;
+     justify-content: center;
+   }
+
+    .header-information-container {
+      border-bottom: 2px solid black;
+      margin: 0.25rem 0;
+      width: 95%;
+    }
+
+  .key,
+  .value {
+    font-size: 1rem;
+  }
+
+   .key {
+     font-weight: bold;
+   }
+
+  .value {
+    font-weight: normal;
+  }
+
+  .body-card {
+    background-color: #F5F5F5;
+    padding: 0.5rem 0;
+  }
+
+  .body-section {
+    margin: 0 3%;
+    padding: 0.5rem 0;
+  }
+
+  .title {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin: 0 0 0.5rem;
+    border-bottom: 2px solid black;
+  }
+
+  .size-maker {
+    font-size: 3rem;
+    height: 30%;
+    opacity: 0;
+  }
+
+  .arrow-up-icon {
+    display: block;
+    background-image: url("./assets/arrow_up.svg");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+  }
+
+  .clickable {
+    cursor: pointer;
+    transition-property: background-color;
+    transition-duration: 0.5s;
+    transition-timing-function: linear;
+  }
+
+  .to-darkblue:hover {
+    background-color: darkblue;
+  }
+
+  img {
+    padding: 0.5rem;
+    width: 100%;
+    min-width: 64px;
+    max-width: 148px;
+  }
+}
+
+/**************************************
+  MEDIA QUERIES PARA LAYOUT RESPONSIVO
+ **************************************/
+
+@media screen and (min-width: 580px) {
+  .PersonDetails {
+    .title {
+      font-size: 1.5rem;
+    }
+
+    .key,
+    .value {
+      font-size: 1.25rem;
+    }
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .PersonDetails {
+    .title {
+      font-size: 1.75rem;
+    }
+
+    .key,
+    .value {
+      font-size: 1.5rem;
+    }
+  }
+}
