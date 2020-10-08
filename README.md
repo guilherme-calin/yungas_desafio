@@ -32,6 +32,6 @@ Ao clicar em uma das pessoas listadas no *card* **Resultados**, será aberta uma
 Para fechá-la, clique no botão com o ícone da seta para cima.
 
 ### Linguagens, Bibliotecas e Frameworks utilizados
-* Linguagem de programação Javascript;
+* Linguagem de programação Typescript;
 * React como *framework* de front end;
 * Sass como pré-processador CSS.                                                                      
