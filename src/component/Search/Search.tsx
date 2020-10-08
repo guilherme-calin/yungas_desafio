@@ -38,11 +38,14 @@ export default class Search extends Component<Props, State> {
         return (
             <div className={styles["Search"]}>
                 <div className={styles["input-container"]}>
-                    <input type="search" placeholder="Digite aqui" value={this.state.text} onChange={this.inputChangeHandler}/>
+                    <input type="search" placeholder="Digite aqui" value={this.state.text}
+                           onChange={this.inputChangeHandler}
+                           onKeyPress={this.keyPressHandler}/>
                 </div>
 
                 <section className={styles["filter"]}>
-                    <div className={`${styles["filter-head"]} ${styles["clickable"]} ${styles["to-black"]}`} onClick={this.toggleFilterHandler}>
+                    <div className={`${styles["filter-head"]} ${styles["clickable"]} ${styles["to-black"]}`}
+                         onClick={this.toggleFilterHandler}>
                         <span className={this.state.closed ? styles["js-arrow-down-icon"] : styles["js-arrow-up-icon"]}>Filtros</span>
                     </div>
                     {
@@ -108,6 +111,16 @@ export default class Search extends Component<Props, State> {
                 </div>
             </div>
         );
+    }
+
+    keyPressHandler = (event :any) :void => {
+        let key :string = event.key;
+
+        if(key.toLowerCase() === "enter") {
+            this.buttonClickHandler();
+        }
+
+        return
     }
 
     inputChangeHandler = (event :any) :void => {

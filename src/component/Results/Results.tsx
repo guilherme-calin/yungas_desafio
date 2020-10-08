@@ -28,7 +28,6 @@ export default class Results extends Component<Props, State> {
     }
 
     render(): ReactNode {
-        console.dir(styles);
         return (
             <div className={styles["Results"]}>
                 <p className={styles["header"]}>Resultados</p>
