@@ -7,7 +7,7 @@ O *code challenge* se refere a um sistema web para busca de pessoas a partir de 
 
 É necessário instalar o Node.js e NPM para executar este projeto.
 
-### Instruções
+### Instruções para Execução
 
 * Clone o repositório;
 * Acesse via linha de comando a pasta raiz do projeto clonado em sua máquina;
@@ -17,6 +17,19 @@ O *code challenge* se refere a um sistema web para busca de pessoas a partir de 
 * Caso queira hospedar o projeto em um servidor, execute o comando ```npm run build``` para
 gerar o *build* de produção no diretório ```./build``` do projeto, e sirva o conteúdo no
 *backend* de sua preferência. 
+
+### Instruções para Utilização
+
+O sistema inicialmente irá trazer todos os registros de acordo com os filtros padrão. 
+
+A mudança de filtros pode ser realizada nas opções apresentadas ao clicar em **Filtros**. 
+
+**É necessário clicar no botão Buscar ao alterar os filtros para que a nova busca seja realizada**.
+
+É possível apertar a tecla *Enter* do teclado após digitar o texto para realizar a busca.
+
+Ao clicar em uma das pessoas listadas no *card* **Resultados**, será aberta uma janela com mais informações.
+Para fechá-la, clique no botão com o ícone da seta para cima.
 
 ### Linguagens, Bibliotecas e Frameworks utilizados
 * Linguagem de programação Javascript;
